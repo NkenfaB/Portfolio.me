@@ -1,0 +1,12 @@
+.wrapper {
+    max-width: 90vh;
+    margin: auto;
+  }
+  
+  .container {
+    padding: 10px;
+    color: #ccc;
+    padding: 30px;
+    font-size: 20px;
+  }
+  

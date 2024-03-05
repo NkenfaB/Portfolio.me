@@ -1,0 +1,30 @@
+.wrapper {
+    max-width: 90vh;
+    margin: auto;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .aboutContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .headerTitle {
+    font-size: 32px;
+    margin-right: 10px;
+  }
+  
+  .horizontalRule {
+    flex-grow: 1;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .TextFont {
+    font-weight: 400;
+  }
+  

@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@tsparticles/engine": "^3.2.1",
+    "@tsparticles/react": "^3.0.0",
+    "react-particles": "^2.12.2",
+    "react-tsparticles": "^2.12.2",
+    "react-typist": "^2.0.5",
+    "tsparticles": "^3.2.1",
+    "tsparticles-slim": "^2.12.0"
+  }
+}

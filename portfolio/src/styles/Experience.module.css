@@ -1,0 +1,92 @@
+.wrapper {
+  max-width: 120vh;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.sidebar {
+  flex: 1; 
+  padding-right: 20px;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarContent1 {
+  flex: 3; 
+  padding: 10px;
+  font-size: 25px;
+}
+
+.sidebarContent2 {
+  flex: 3; 
+  padding: 10px;
+  font-size: 15px;
+  text-align: left;
+  line-height: 30px;
+}
+
+.progressBar {
+  width: 100%;
+  padding: 10px;
+  background-color: none;
+  color: #ccc;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.progressBar:hover {
+  color: #d09fe0;
+}
+
+.progressBar.active {
+  padding: 1px;
+  color: #d09fe0;
+  font-weight: 800;
+  border-right: 4px solid #d09fe0;
+}
+
+.animationActive {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition-delay: 0.2s;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 3;
+  }
+}
+
+.horizontalRule {
+  flex-grow: 1;
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.headerTitle {
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+.TextFont {
+  font-weight: 400;
+}
+
+
