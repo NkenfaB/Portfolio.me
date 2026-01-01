@@ -15,7 +15,7 @@ const experiences = [
       'Built and shipped the Yoba Android/React Native app with Redux state management, i18n localization, custom UI components, and integrated payment flows using CinetPay',
       'Architected Node.js/Express backends with Sequelize/MySQL, integrating external services like SendGrid and Twilio for notifications',
       'Developed admin dashboards for content management and user administration',
-      'Managed environment configs, deployed to Play Store, and handled mobile build processes including ProGuard mapping',
+      'Managed environment configs, deployed to Play Store, and handled mobile build processes including ProGuard mapping.',
     ],
     tags: ['React Native', 'Redux', 'Node.js', 'Express', 'MySQL', 'SendGrid', 'Twilio'],
   },
