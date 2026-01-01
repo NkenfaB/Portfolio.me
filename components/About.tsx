@@ -40,7 +40,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Currently pursuing a <span className="font-semibold">Bachelor&apos;s in Software Engineering</span> at the{' '}
+              Currently in my final year of a <span className="font-semibold">Master&apos;s in Software Engineering</span> at the{' '}
               <a href="https://www.ubuea.cm" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-dark-accent hover:underline">
                 University of Buea
               </a>, I specialize in building and shipping full-stack features for production applications.
