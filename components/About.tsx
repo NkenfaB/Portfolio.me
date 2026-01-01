@@ -51,7 +51,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              My recent work includes developing the <span className="font-semibold">Yoba Android/React Native app</span> with Redux state management, i18n localization, custom UI components, and integrated payment flows (CinetPay). On the backend, I've architected Node.js/Express APIs with Sequelize/MySQL, integrated external services (SendGrid, Twilio), and built admin dashboards.
+              My recent work includes developing the <span className="font-semibold">Yoba Android/React Native app</span> with Redux state management, i18n localization, custom UI components, and integrated payment flows (CinetPay). On the backend, I&apos;ve architected Node.js/Express APIs with Sequelize/MySQL, integrated external services (SendGrid, Twilio), and built admin dashboards.
             </motion.p>
 
             <motion.p
