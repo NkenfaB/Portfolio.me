@@ -31,7 +31,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              I'm a <span className="text-primary-600 dark:text-primary-400 font-semibold">Full-Stack Software Engineer</span> based in Buea, Cameroon, with{' '}
+              I&apos;m a <span className="text-primary-600 dark:text-primary-400 font-semibold">Full-Stack Software Engineer</span> based in Buea, Cameroon, with{' '}
               <span className="text-primary-600 dark:text-primary-400 font-semibold">5 years of professional experience</span> building scalable mobile and web applications that solve real-world problems.
             </motion.p>
 
@@ -40,7 +40,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Currently pursuing a <span className="font-semibold">Bachelor's in Software Engineering</span> at the{' '}
+              Currently pursuing a <span className="font-semibold">Bachelor&apos;s in Software Engineering</span> at the{' '}
               <a href="https://www.ubuea.cm" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-dark-accent hover:underline">
                 University of Buea
               </a>, I specialize in building and shipping full-stack features for production applications.
@@ -59,7 +59,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              I've also shipped GCP-backed applications using <span className="font-semibold">FastAPI, Cloud Run, Postgres/Cloud SQL, and GCS</span>. I implement secure auth flows, admin dashboards, and storage integrations. I'm actively learning Kubernetes, having added session orchestration and health checks using the Python Kubernetes client.
+              I&apos;ve also shipped GCP-backed applications using <span className="font-semibold">FastAPI, Cloud Run, Postgres/Cloud SQL, and GCS</span>. I implement secure auth flows, admin dashboards, and storage integrations. I&apos;m actively learning Kubernetes, having added session orchestration and health checks using the Python Kubernetes client.
             </motion.p>
 
             <motion.p
@@ -67,7 +67,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              Outside of coding, I follow the latest developments in technology and science, enjoy playing video games, and love reading. I'm passionate about creating software that makes a positive impact on people's lives.
+              Outside of coding, I follow the latest developments in technology and science, enjoy playing video games, and love reading. I&apos;m passionate about creating software that makes a positive impact on people&apos;s lives.
             </motion.p>
           </div>
         </motion.div>

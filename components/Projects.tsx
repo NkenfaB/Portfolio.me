@@ -75,7 +75,7 @@ export default function Projects() {
             </h2>
             <div className="h-1 w-32 bg-gradient-to-r from-primary-600 to-purple-600 dark:from-dark-accent dark:to-primary-500 rounded-full" />
             <p className="text-lg text-gray-600 dark:text-dark-text mt-4">
-              Some of the projects I've worked on recently
+              Some of the projects I&apos;ve worked on recently
             </p>
           </div>
 

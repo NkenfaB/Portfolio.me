@@ -77,7 +77,7 @@ export default function Skills() {
             </h2>
             <div className="h-1 w-32 bg-gradient-to-r from-primary-600 to-purple-600 dark:from-dark-accent dark:to-primary-500 rounded-full mx-auto mb-6" />
             <p className="text-lg text-gray-600 dark:text-dark-text max-w-2xl mx-auto">
-              Technologies I've worked with recently
+              Technologies I&apos;ve worked with recently
             </p>
           </div>
 

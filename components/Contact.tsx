@@ -60,10 +60,10 @@ export default function Contact() {
             className="mb-12"
           >
             <p className="text-lg md:text-xl text-gray-600 dark:text-dark-text leading-relaxed mb-6">
-              I'm currently open to new opportunities and interesting projects. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!
+              I&apos;m currently open to new opportunities and interesting projects. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!
             </p>
             <p className="text-lg md:text-xl text-gray-600 dark:text-dark-text leading-relaxed">
-              I'm always excited to discuss new technologies, potential collaborations, or opportunities to create something amazing together.
+              I&apos;m always excited to discuss new technologies, potential collaborations, or opportunities to create something amazing together.
             </p>
           </motion.div>
 
