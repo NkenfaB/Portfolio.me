@@ -122,7 +122,7 @@ export default function Contact() {
               Built with Next.js, TypeScript, Tailwind CSS & Framer Motion
             </p>
             <p className="text-gray-500 dark:text-gray-600 text-sm mt-2">
-              &copy; {new Date().getFullYear()} Nkenfa Brice. All rights reserved.
+              &copy; {new Date().getFullYear()} Nkenfa Brandon. All rights reserved.
             </p>
           </motion.div>
         </motion.div>
