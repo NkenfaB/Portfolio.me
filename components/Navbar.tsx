@@ -1,5 +1,6 @@
 "use client";
 
+import { BackgroundMotionControl } from "./SectionAtmosphere";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
@@ -28,18 +29,33 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-15% 0px -65% 0px", threshold: 0 }
-    );
-    document
-      .querySelectorAll("main > section")
-      .forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    let observer: IntersectionObserver;
+    const observeSections = () => {
+      observer?.disconnect();
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setActive(entry.target.id);
+          });
+        },
+        {
+          rootMargin: `-100px 0px -${Math.max(
+            0,
+            window.innerHeight - 220
+          )}px 0px`,
+          threshold: 0,
+        }
+      );
+      document
+        .querySelectorAll("main > section")
+        .forEach((section) => observer.observe(section));
+    };
+    observeSections();
+    window.addEventListener("resize", observeSections, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", observeSections);
+    };
   }, []);
 
   useEffect(() => {
@@ -95,6 +111,7 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="nav-actions">
+          <BackgroundMotionControl />
           <button
             className="icon-button theme-toggle"
             aria-label={

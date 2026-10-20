@@ -1,3 +1,4 @@
+import ParticlesBackground from "./ParticlesBackground";
 import Image from "next/image";
 import { HiArrowDown, HiArrowUpRight } from "react-icons/hi2";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -6,6 +7,7 @@ import { ActionLink } from "./PortfolioUI";
 export default function Hero() {
   return (
     <section id="home" className="hero shell">
+      <ParticlesBackground />
       <div className="hero-copy">
         <p className="eyebrow hero-enter">
           <span className="status-dot" /> Open to remote opportunities

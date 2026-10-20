@@ -1,3 +1,4 @@
+import SectionAtmosphere from "./SectionAtmosphere";
 import { experiences } from "@/data/experience";
 import { HiArrowDownRight } from "react-icons/hi2";
 import { Reveal, SectionHeading } from "./PortfolioUI";
@@ -5,6 +6,7 @@ import { Reveal, SectionHeading } from "./PortfolioUI";
 export default function Experience() {
   return (
     <section id="experience" className="section">
+      <SectionAtmosphere pattern="signals" />
       <div className="shell">
         <SectionHeading
           number="03"

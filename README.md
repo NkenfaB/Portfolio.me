@@ -15,7 +15,7 @@ Built with Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and ne
 5. About, engineering focus, and education.
 6. Email, copy-address action, and professional links.
 
-The design includes light/dark themes, animated button treatments, section reveals, a scroll progress indicator, and a mobile navigation menu. Motion respects `prefers-reduced-motion`. Core content renders without JavaScript; category switching and the mobile menu require JavaScript.
+The design includes light/dark themes, animated button treatments, section reveals, a scroll progress indicator, and a mobile navigation menu. Each section has a distinct royal blue background: connected particles, drifting geometry, a circuit grid, rising signals, orbital dots, or expanding rings. The pause button beside the theme toggle remembers your background-motion preference. Backgrounds pause off-screen and in hidden tabs, release inactive canvas buffers, and cap drawing at 30fps. Motion respects `prefers-reduced-motion`. Core content renders without JavaScript; category switching and the mobile menu require JavaScript.
 
 ## Local development
 
@@ -50,6 +50,7 @@ npm start
 | About and education | `components/About.tsx` |
 | Email and social links | `components/Contact.tsx` |
 | Colors, layout, transitions, responsive styles | `app/globals.css` |
+| Section backgrounds and pause preference | `components/SectionAtmosphere.tsx` |
 | Shared motion, reveals, action links | `components/PortfolioUI.tsx` |
 | SEO and social metadata | `app/layout.tsx` |
 
@@ -63,7 +64,7 @@ Vercel is connected to this repository. Pushes to `main` deploy the production s
 
 ## Verification
 
-The redesign passed a production build and Chromium checks in light and dark themes at 1440, 1024, 768, 390, 360, and 320px. Checks covered all 24 ratings, both project categories, original date and link preservation, expandable content, keyboard tabs, mobile navigation, theme switching, email copying, reduced motion, and visible core content without JavaScript. Other browser engines have not been checked in this pass.
+The redesign passed a production build and Chromium checks in light and dark themes at 1440, 1024, 768, 390, 360, and 320px. Checks covered all 24 ratings, both project categories, original date and link preservation, expandable content, keyboard tabs, mobile navigation, theme switching, email copying, reduced motion, and visible core content without JavaScript. Background checks also verified real frame changes, pause/resume, off-screen buffer release, hidden-tab stopping, saved preferences, and static artwork with reduced motion. Other browser engines have not been checked in this pass.
 
 ## Contact
 

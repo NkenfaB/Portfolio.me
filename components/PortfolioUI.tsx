@@ -8,6 +8,7 @@ import {
   useSpring,
   useReducedMotion,
 } from "framer-motion";
+import { BackgroundMotionProvider } from "./SectionAtmosphere";
 import { HiArrowUpRight } from "react-icons/hi2";
 
 export function PortfolioMotion({ children }: { children: ReactNode }) {
@@ -16,14 +17,16 @@ export function PortfolioMotion({ children }: { children: ReactNode }) {
   const reduceMotion = useReducedMotion();
   return (
     <MotionConfig reducedMotion="user">
-      {!reduceMotion && (
-        <motion.div
-          className="reading-progress"
-          style={{ scaleX: progress }}
-          aria-hidden="true"
-        />
-      )}
-      {children}
+      <BackgroundMotionProvider>
+        {!reduceMotion && (
+          <motion.div
+            className="reading-progress"
+            style={{ scaleX: progress }}
+            aria-hidden="true"
+          />
+        )}
+        {children}
+      </BackgroundMotionProvider>
     </MotionConfig>
   );
 }

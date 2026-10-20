@@ -1,5 +1,6 @@
 "use client";
 
+import SectionAtmosphere from "./SectionAtmosphere";
 import { useEffect, useRef, useState } from "react";
 import {
   HiArrowUpRight,
@@ -33,6 +34,7 @@ export default function Contact() {
   };
   return (
     <section id="contact" className="contact-section">
+      <SectionAtmosphere pattern="ripples" />
       <div className="shell">
         <Reveal>
           <div className="contact-topline">

@@ -2256,3 +2256,45 @@ summary::-webkit-details-marker {
     display: none;
   }
 }
+
+/* Section-specific decorative motion sits behind content, never over controls. */
+main > section {
+  position: relative;
+  isolation: isolate;
+}
+.section-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.8;
+  mask-image: linear-gradient(90deg, #0008, #000);
+}
+.section-atmosphere canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.atmosphere-orbits {
+  mask-image: linear-gradient(90deg, transparent, #000 65%);
+}
+.motion-toggle:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.motion-toggle:disabled:hover {
+  transform: none;
+  background: transparent;
+  color: inherit;
+}
+@media (max-width: 359px) {
+  .nav-contact > svg {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-atmosphere {
+    opacity: 0.55;
+  }
+}

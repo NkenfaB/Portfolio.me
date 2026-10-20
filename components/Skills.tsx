@@ -1,5 +1,6 @@
 "use client";
 
+import SectionAtmosphere from "./SectionAtmosphere";
 import { useRef, useState, type KeyboardEvent } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaStar, FaRegStar } from "react-icons/fa";
@@ -23,6 +24,7 @@ export default function Skills() {
   };
   return (
     <section id="skills" className="section section-tinted">
+      <SectionAtmosphere pattern="grid" />
       <div className="shell">
         <SectionHeading
           number="02"

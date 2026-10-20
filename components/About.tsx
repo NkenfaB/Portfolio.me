@@ -1,3 +1,4 @@
+import SectionAtmosphere from "./SectionAtmosphere";
 import {
   HiArrowUpRight,
   HiCodeBracket,
@@ -27,6 +28,7 @@ const focus = [
 export default function About() {
   return (
     <section id="about" className="section section-tinted">
+      <SectionAtmosphere pattern="orbits" />
       <div className="shell">
         <SectionHeading
           number="04"

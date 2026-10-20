@@ -1,5 +1,6 @@
 "use client";
 
+import SectionAtmosphere from "./SectionAtmosphere";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
@@ -148,6 +149,7 @@ export default function Projects() {
   const group = projectGroups[selected];
   return (
     <section id="projects" className="section">
+      <SectionAtmosphere pattern="drift" />
       <div className="shell">
         <SectionHeading
           number="01"
