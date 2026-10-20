@@ -1,174 +1,72 @@
-# Professional Portfolio - Nkenfa Brice
+# Nkenfa Brandon — Portfolio
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion.
+Personal portfolio for web, mobile, API, and cloud engineering work.
 
-## Features
+**Live site:** [nkenfa-brandon.vercel.app](https://nkenfa-brandon.vercel.app/)
 
-- **Modern Tech Stack**: Built with Next.js 15 (App Router), TypeScript, and Tailwind CSS
-- **Stunning Animations**: Smooth animations powered by Framer Motion
-- **Dark/Light Mode**: System-aware theme toggle with next-themes
-- **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop, 4K)
-- **SEO Optimized**: Comprehensive metadata and Open Graph tags
-- **Type-Safe**: Full TypeScript support with strict type checking
-- **Accessibility**: ARIA labels, keyboard navigation, and high contrast
-- **Performance**: Optimized bundle size and loading performance
+Built with Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and next-themes.
 
-## Sections
+## Page structure
 
-1. **Hero Section**: Eye-catching introduction with animated typing effect
-2. **About**: Professional summary with 5 years of experience
-3. **Skills**: Categorized tech stack showcase (Frontend, Backend, Database, Cloud)
-4. **Experience**: Interactive timeline of professional experience
-5. **Projects**: Featured projects with tech stack and links
-6. **Contact**: Social links and contact information
+1. Portrait introduction and links to selected work and contact.
+2. Personal projects and company/contract contributions, with separate attribution and original dates.
+3. Compact skill categories with five-star experience ratings and keyboard navigation.
+4. Career timeline with expandable contributions and earlier internships.
+5. About, engineering focus, and education.
+6. Email, copy-address action, and professional links.
 
-## Tech Stack
+The design includes light/dark themes, animated button treatments, section reveals, a scroll progress indicator, and a mobile navigation menu. Motion respects `prefers-reduced-motion`. Core content renders without JavaScript; category switching and the mobile menu require JavaScript.
 
-### Frontend
-- **Next.js 15**: React framework with App Router
-- **React 19**: Latest React features
-- **TypeScript**: Type-safe development
-- **Tailwind CSS**: Utility-first CSS framework
-- **Framer Motion**: Animation library
-- **next-themes**: Dark mode support
+## Local development
 
-### Key Technologies Highlighted
-- React Native & Redux for mobile development
-- Node.js & Express for backend APIs
-- FastAPI & Python for high-performance APIs
-- GCP (Cloud Run, Cloud SQL, Cloud Storage)
-- Kubernetes for orchestration
-- MySQL & PostgreSQL databases
+Use Node.js 20.19+ and npm. No environment variables are required for the portfolio.
 
-## Getting Started
-
-### Prerequisites
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. Navigate to the project directory:
 ```bash
-cd nextjs-portfolio
-```
-
-2. Install dependencies (already done):
-```bash
-npm install
-```
-
-3. Run the development server:
-```bash
+npm ci
 npm run dev
 ```
 
-4. Open [http://localhost:3002](http://localhost:3002) in your browser
+Open [localhost:3000](http://localhost:3000). To choose another port:
 
-### Build for Production
+```bash
+npm run dev -- --port 3002
+```
+
+Production build and local preview:
 
 ```bash
 npm run build
 npm start
 ```
 
-## Project Structure
+## Editing content
 
-```
-nextjs-portfolio/
-├── app/
-│   ├── globals.css          # Global styles
-│   ├── layout.tsx            # Root layout with metadata
-│   └── page.tsx              # Main page component
-├── components/
-│   ├── About.tsx             # About section
-│   ├── Contact.tsx           # Contact section
-│   ├── Experience.tsx        # Experience timeline
-│   ├── Hero.tsx              # Hero section
-│   ├── Navbar.tsx            # Navigation with theme toggle
-│   ├── Projects.tsx          # Projects showcase
-│   ├── Skills.tsx            # Skills grid
-│   └── ThemeProvider.tsx     # Theme provider wrapper
-├── public/
-│   └── assets/               # Images and static files
-├── next.config.ts            # Next.js configuration
-├── tailwind.config.ts        # Tailwind CSS configuration
-├── tsconfig.json             # TypeScript configuration
-└── package.json              # Dependencies and scripts
-```
+| Content | Source |
+| --- | --- |
+| Projects, ownership, original dates, links | `data/projects.ts` |
+| Skill categories and ratings | `data/skills.ts` |
+| Professional experience | `data/experience.ts` |
+| Introduction and portrait | `components/Hero.tsx`, `public/assets/me2.jpg` |
+| About and education | `components/About.tsx` |
+| Email and social links | `components/Contact.tsx` |
+| Colors, layout, transitions, responsive styles | `app/globals.css` |
+| Shared motion, reveals, action links | `components/PortfolioUI.tsx` |
+| SEO and social metadata | `app/layout.tsx` |
 
-## Customization
+Keep personal project dates separate from later maintenance dates. Professional dates describe the engagement with an organization, not the lifetime of its products. Date evidence is recorded in [docs/project-history.md](docs/project-history.md).
 
-### Update Personal Information
-
-1. **Hero Section** (`components/Hero.tsx`):
-   - Update name, title, and description
-   - Modify social links (GitHub, LinkedIn, Email)
-
-2. **About Section** (`components/About.tsx`):
-   - Edit professional summary
-   - Update education and experience details
-
-3. **Experience** (`components/Experience.tsx`):
-   - Add/edit work experience entries
-   - Update company names, positions, and highlights
-
-4. **Projects** (`components/Projects.tsx`):
-   - Add your projects
-   - Update GitHub links and demo URLs
-
-5. **Contact** (`components/Contact.tsx`):
-   - Update email address
-   - Modify social media links
-
-### Update Metadata
-
-Edit `app/layout.tsx` to update:
-- Site title and description
-- Open Graph metadata
-- Twitter card information
+The root `components/` directory is used by `app/page.tsx`.
 
 ## Deployment
 
-### Vercel (Recommended)
+Vercel is connected to this repository. Pushes to `main` deploy the production site; other branches receive preview deployments. The production URL is the link above.
 
-1. Push your code to GitHub
-2. Import the repository in Vercel
-3. Deploy with one click
+## Verification
 
-### Other Platforms
-
-Build the project and deploy the `.next` directory:
-
-```bash
-npm run build
-```
-
-## Performance Optimizations
-
-- Next.js Image component for optimized images
-- Framer Motion animations with GPU acceleration
-- Code splitting and lazy loading
-- Tailwind CSS purging for minimal bundle size
-- Experimental package imports optimization
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-This project is open source and available under the MIT License.
+The redesign passed a production build and Chromium checks in light and dark themes at 1440, 1024, 768, 390, 360, and 320px. Checks covered all 24 ratings, both project categories, original date and link preservation, expandable content, keyboard tabs, mobile navigation, theme switching, email copying, reduced motion, and visible core content without JavaScript. Other browser engines have not been checked in this pass.
 
 ## Contact
 
-- **Email**: nkenfa@example.com
-- **GitHub**: [NkenfaB](https://github.com/NkenfaB)
-- **LinkedIn**: [nkenfa](https://linkedin.com/in/nkenfa)
-
----
-
-Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+- [Email](mailto:nkenfabrandon71@gmail.com)
+- [GitHub](https://github.com/NkenfaB)
+- [LinkedIn](https://www.linkedin.com/in/nkenfa-brandon-30064b178)
