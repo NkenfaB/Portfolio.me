@@ -1,28 +1,40 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Nkenfa | Full-Stack Software Engineer',
-  description: 'Full-stack software engineer with 5 years of experience building scalable mobile and web applications. Specializing in React Native, Node.js, FastAPI, and GCP.',
-  keywords: ['Software Engineer', 'Full Stack Developer', 'React Native', 'Node.js', 'FastAPI', 'GCP', 'Cloud Run', 'Kubernetes'],
-  authors: [{ name: 'Nkenfa' }],
-  creator: 'Nkenfa',
+  metadataBase: new URL("https://nkenfa-brandon.vercel.app"),
+  title: "Nkenfa Brandon | Full-Stack Software Engineer",
+  description:
+    "Full-stack software engineer with 5 years of experience building scalable mobile and web applications. Specializing in React Native, Node.js, FastAPI, and GCP.",
+  keywords: [
+    "Software Engineer",
+    "Full Stack Developer",
+    "React Native",
+    "Node.js",
+    "FastAPI",
+    "GCP",
+    "Cloud Run",
+    "Kubernetes",
+  ],
+  authors: [{ name: "Nkenfa" }],
+  creator: "Nkenfa",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://your-domain.com',
-    title: 'Nkenfa | Full-Stack Software Engineer',
-    description: 'Full-stack software engineer with 5 years of experience in modern web and mobile development.',
-    siteName: 'Nkenfa Portfolio',
+    type: "website",
+    locale: "en_US",
+    url: "https://nkenfa-brandon.vercel.app",
+    title: "Nkenfa | Full-Stack Software Engineer",
+    description:
+      "Full-stack software engineer with 5 years of experience in modern web and mobile development.",
+    siteName: "Nkenfa Portfolio",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Nkenfa | Full-Stack Software Engineer',
-    description: 'Full-stack software engineer with 5 years of experience.',
+    card: "summary_large_image",
+    title: "Nkenfa | Full-Stack Software Engineer",
+    description: "Full-stack software engineer with 5 years of experience.",
   },
   robots: {
     index: true,
