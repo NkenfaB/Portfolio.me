@@ -1,76 +1,95 @@
-'use client';
+import {
+  HiArrowUpRight,
+  HiCodeBracket,
+  HiDevicePhoneMobile,
+  HiCloud,
+} from "react-icons/hi2";
+import { Reveal, SectionHeading } from "./PortfolioUI";
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+const focus = [
+  {
+    icon: HiDevicePhoneMobile,
+    title: "Products people use",
+    text: "Responsive web experiences and React Native apps, from authentication to payments and release delivery.",
+  },
+  {
+    icon: HiCodeBracket,
+    title: "Systems that connect",
+    text: "APIs, data services, and integrations that make the interface useful and keep the product moving.",
+  },
+  {
+    icon: HiCloud,
+    title: "Ownership beyond launch",
+    text: "Cloud deployments, debugging, testing, and maintenance. Shipping is the start of the next iteration.",
+  },
+];
 
 export default function About() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="about" ref={ref} className="py-20 md:py-32 bg-white dark:bg-dark-bg">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
-        >
-          {/* Section Header */}
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-dark-heading mb-4">
-              <span className="text-primary-600 dark:text-dark-accent font-mono">01.</span> About Me
-            </h2>
-            <div className="h-1 w-32 bg-gradient-to-r from-primary-600 to-purple-600 dark:from-dark-accent dark:to-primary-500 rounded-full" />
+    <section id="about" className="section section-tinted">
+      <div className="shell">
+        <SectionHeading
+          number="04"
+          eyebrow="A little about me"
+          title="Curiosity meets craft."
+        />
+        <div className="about-grid">
+          <Reveal className="about-copy">
+            <p className="about-lead">
+              I like understanding the whole system—and making every part work
+              better together.
+            </p>
+            <p>
+              I&apos;m Nkenfa, a full-stack software engineer in Buea, Cameroon.
+              My work spans React and Next.js interfaces, React Native apps,
+              Node.js and Python APIs, and Google Cloud deployments.
+            </p>
+            <p>
+              I&apos;ve delivered features for Afriknetworks and Stied Research,
+              built services at Camsol Technologies, and explored mobile machine
+              learning and cryptography through personal projects. I bring that
+              same hands-on curiosity to each new problem.
+            </p>
+            <div className="about-facts">
+              <div>
+                <span className="mono">BASED IN</span>
+                <strong>Cameroon · Remote</strong>
+              </div>
+              <div>
+                <span className="mono">LANGUAGES</span>
+                <strong>English & French</strong>
+              </div>
+              <div>
+                <span className="mono">EDUCATION</span>
+                <strong>Software Engineering</strong>
+                <span>University of Buea · Master&apos;s, 2024–2026</span>
+              </div>
+            </div>
+            <a
+              className="text-link"
+              href="https://github.com/NkenfaB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow what I&apos;m building{" "}
+              <HiArrowUpRight aria-hidden="true" />
+            </a>
+          </Reveal>
+          <div className="focus-list">
+            {focus.map((item, index) => (
+              <Reveal key={item.title} delay={index * 70}>
+                <div className="focus-item">
+                  <item.icon aria-hidden="true" />
+                  <div>
+                    <span className="mono">0{index + 1}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
-
-          <div className="space-y-6 text-lg text-gray-700 dark:text-dark-text leading-relaxed">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              I&apos;m a <span className="text-primary-600 dark:text-primary-400 font-semibold">Full-Stack Software Engineer</span> based in Buea, Cameroon, with{' '}
-              <span className="text-primary-600 dark:text-primary-400 font-semibold">5 years of professional experience</span> building scalable mobile and web applications that solve real-world problems.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-            >
-              Currently in my final year of a <span className="font-semibold">Master&apos;s in Software Engineering</span> at the{' '}
-              <a href="https://www.ubuea.cm" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-dark-accent hover:underline">
-                University of Buea
-              </a>, I specialize in building and shipping full-stack features for production applications.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-            >
-              My recent work includes developing the <span className="font-semibold">Yoba Android/React Native app</span> with Redux state management, i18n localization, custom UI components, and integrated payment flows (CinetPay). On the backend, I&apos;ve architected Node.js/Express APIs with Sequelize/MySQL, integrated external services (SendGrid, Twilio), and built admin dashboards.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-            >
-              I&apos;ve also shipped GCP-backed applications using <span className="font-semibold">FastAPI, Cloud Run, Postgres/Cloud SQL, and GCS</span>. I implement secure auth flows, admin dashboards, and storage integrations. I&apos;m actively learning Kubernetes, having added session orchestration and health checks using the Python Kubernetes client.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-            >
-              Outside of coding, I follow the latest developments in technology and science, enjoy playing video games, and love reading. I&apos;m passionate about creating software that makes a positive impact on people&apos;s lives.
-            </motion.p>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
