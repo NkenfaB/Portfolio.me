@@ -22,8 +22,9 @@ export default function Hero() {
           Interfaces to infrastructure.
         </h2>
         <p className="hero-description hero-enter">
-          I build web and mobile products, connect the APIs behind them, and
-          bring them to production. Based in Cameroon. Working everywhere.
+          I’m a full-stack software engineer in Buea, Cameroon. I build React
+          and Next.js web experiences, React Native mobile apps, and Node.js /
+          Python APIs—through to Google Cloud deployment.
         </p>
         <div className="hero-actions hero-enter">
           <ActionLink href="#projects">Explore my work</ActionLink>

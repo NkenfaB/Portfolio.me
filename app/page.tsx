@@ -1,3 +1,4 @@
+import { profileStructuredData } from "@/data/site";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -10,6 +11,15 @@ import { PortfolioMotion } from "@/components/PortfolioUI";
 export default function Home() {
   return (
     <PortfolioMotion>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(profileStructuredData).replace(
+            /</g,
+            "\\u003c"
+          ),
+        }}
+      />
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>

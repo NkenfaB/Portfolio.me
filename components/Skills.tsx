@@ -2,7 +2,7 @@
 
 import SectionAtmosphere from "./SectionAtmosphere";
 import { useRef, useState, type KeyboardEvent } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { skillCategories, skillLevels } from "@/data/skills";
 import { Reveal, SectionHeading } from "./PortfolioUI";
@@ -70,44 +70,40 @@ export default function Skills() {
                 hidden={selected !== index}
                 tabIndex={0}
               >
-                <AnimatePresence mode="wait" initial={false}>
-                  {selected === index && (
-                    <motion.div
-                      key={category.title}
-                      className="skill-grid"
-                      initial={false}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -8 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {category.skills.map((skill) => (
-                        <div className="skill-item" key={skill.name}>
-                          <skill.icon
-                            className="skill-icon"
-                            aria-hidden="true"
-                          />
-                          <span className="skill-name">{skill.name}</span>
-                          <span
-                            className="skill-rating"
-                            role="img"
-                            aria-label={`${skill.name}: ${
-                              skill.rating
-                            } out of 5 stars — ${skillLevels[skill.rating]}`}
-                            title={`${skill.rating}/5 · ${
-                              skillLevels[skill.rating]
-                            }`}
-                          >
-                            {Array.from({ length: 5 }, (_, star) => {
-                              const Star =
-                                star < skill.rating ? FaStar : FaRegStar;
-                              return <Star key={star} aria-hidden="true" />;
-                            })}
-                          </span>
-                        </div>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <motion.div
+                  key={category.title}
+                  className="skill-grid"
+                  initial={false}
+                  animate={
+                    selected === index
+                      ? { opacity: 1, y: 0 }
+                      : { opacity: 0, y: 8 }
+                  }
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {category.skills.map((skill) => (
+                    <div className="skill-item" key={skill.name}>
+                      <skill.icon className="skill-icon" aria-hidden="true" />
+                      <span className="skill-name">{skill.name}</span>
+                      <span
+                        className="skill-rating"
+                        role="img"
+                        aria-label={`${skill.name}: ${
+                          skill.rating
+                        } out of 5 stars — ${skillLevels[skill.rating]}`}
+                        title={`${skill.rating}/5 · ${
+                          skillLevels[skill.rating]
+                        }`}
+                      >
+                        {Array.from({ length: 5 }, (_, star) => {
+                          const Star = star < skill.rating ? FaStar : FaRegStar;
+                          return <Star key={star} aria-hidden="true" />;
+                        })}
+                      </span>
+                    </div>
+                  ))}
+                </motion.div>
               </div>
             ))}
             <p className="skill-legend">

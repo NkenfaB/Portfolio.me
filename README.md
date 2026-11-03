@@ -2,7 +2,7 @@
 
 Personal portfolio for web, mobile, API, and cloud engineering work.
 
-**Live site:** [nkenfa-brandon.vercel.app](https://nkenfa-brandon.vercel.app/)
+**Live site:** [nkenfa.dev](https://www.nkenfa.dev/)
 
 Built with Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and next-themes.
 
@@ -71,3 +71,11 @@ The redesign passed a production build and Chromium checks in light and dark the
 - [Email](mailto:nkenfabrandon71@gmail.com)
 - [GitHub](https://github.com/NkenfaB)
 - [LinkedIn](https://www.linkedin.com/in/nkenfa-brandon-30064b178)
+
+## Search and domain setup
+
+Vercel redirects `https://nkenfa.dev/` to the configured primary host, `https://www.nkenfa.dev/`. The same host is used by the canonical URL, social metadata, profile structured data, robots.txt, and sitemap.xml. Known former production Vercel hosts redirect permanently to the new host; preview deployment URLs are not redirected.
+
+The one-page portfolio has one canonical sitemap entry. All project groups and skill panels render in the initial HTML; the interface hides inactive panels without requiring a click to fetch or create their content. Original project dates and employer attribution remain unchanged.
+
+After publishing, use the `nkenfa.dev` Domain property in Google Search Console to confirm ownership and submit `https://www.nkenfa.dev/sitemap.xml`. DNS ownership verification is managed at the domain provider; never remove its Google verification TXT record. Verification and sitemap submission do not guarantee indexing or a ranking position.

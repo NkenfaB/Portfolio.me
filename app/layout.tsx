@@ -2,43 +2,47 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { site } from "@/data/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nkenfa-brandon.vercel.app"),
-  title: "Nkenfa Brandon | Full-Stack Software Engineer",
-  description:
-    "Full-stack software engineer with 5 years of experience building scalable mobile and web applications. Specializing in React Native, Node.js, FastAPI, and GCP.",
-  keywords: [
-    "Software Engineer",
-    "Full Stack Developer",
-    "React Native",
-    "Node.js",
-    "FastAPI",
-    "GCP",
-    "Cloud Run",
-    "Kubernetes",
-  ],
-  authors: [{ name: "Nkenfa" }],
-  creator: "Nkenfa",
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  alternates: { canonical: "/" },
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nkenfa-brandon.vercel.app",
-    title: "Nkenfa | Full-Stack Software Engineer",
-    description:
-      "Full-stack software engineer with 5 years of experience in modern web and mobile development.",
-    siteName: "Nkenfa Portfolio",
+    url: "/",
+    title: site.title,
+    description: site.description,
+    siteName: site.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nkenfa | Full-Stack Software Engineer",
-    description: "Full-stack software engineer with 5 years of experience.",
+    title: site.title,
+    description: site.description,
+    images: [
+      {
+        url: "/opengraph-image",
+        alt: "Nkenfa Brandon — Full-Stack Software Engineer",
+      },
+    ],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 

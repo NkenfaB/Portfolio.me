@@ -2,7 +2,7 @@
 
 import SectionAtmosphere from "./SectionAtmosphere";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { HiArrowUpRight, HiArrowRight, HiPlus } from "react-icons/hi2";
 import { projectGroups, type Project } from "@/data/projects";
@@ -146,7 +146,6 @@ function ProjectCard({
 
 export default function Projects() {
   const [selected, setSelected] = useState(0);
-  const group = projectGroups[selected];
   return (
     <section id="projects" className="section">
       <SectionAtmosphere pattern="drift" />
@@ -185,13 +184,17 @@ export default function Projects() {
             More on GitHub <HiArrowUpRight aria-hidden="true" />
           </a>
         </Reveal>
-        <AnimatePresence mode="wait" initial={false}>
+        {projectGroups.map((group, groupIndex) => (
           <motion.section
             key={group.id}
             aria-labelledby={group.id}
+            hidden={selected !== groupIndex}
             initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
+            animate={
+              selected === groupIndex
+                ? { opacity: 1, y: 0 }
+                : { opacity: 0, y: 8 }
+            }
             transition={{ duration: 0.22 }}
           >
             <div className="project-group-intro">
@@ -204,12 +207,12 @@ export default function Projects() {
                   key={project.title}
                   project={project}
                   index={index}
-                  personal={selected === 0}
+                  personal={groupIndex === 0}
                 />
               ))}
             </div>
           </motion.section>
-        </AnimatePresence>
+        ))}
         <Reveal className="work-footnote">
           <span className="mono">
             GOOD SOFTWARE IS ALWAYS A WORK IN PROGRESS.
