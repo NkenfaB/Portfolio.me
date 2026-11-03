@@ -44,7 +44,8 @@ export default function About() {
             <p>
               I&apos;m Nkenfa, a full-stack software engineer in Buea, Cameroon.
               My work spans React and Next.js interfaces, React Native apps,
-              Node.js and Python APIs, and Google Cloud deployments.
+              Node.js and Python APIs, AI agent workflows with LangGraph and
+              LangChain, and Google Cloud deployments.
             </p>
             <p>
               I&apos;ve delivered features for Afriknetworks and Stied Research,

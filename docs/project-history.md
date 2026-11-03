@@ -27,3 +27,22 @@ Professional dates are engagement periods, not product creation dates. Company r
 ## Showcase scope
 
 Lively and Secure Messenger remain the selected personal projects. BuyMore, Quantum Code Breaker and Result App remain improvement candidates; their recent draft PRs do not establish original completion or production readiness. Add them with original-history evidence and an accurate demo/prototype scope in a later selection pass.
+
+
+## Stied Research portfolio expansion — 3 November 2026
+
+The owner confirmed contributions across five Stied Research projects and supplied the implementation inventory for WEEMS. The portfolio CV PDFs were not modified. Professional periods remain the organization engagement dates; individual product start and completion dates were not supplied.
+
+| Project | Public check | Owner-estimated contribution |
+| --- | --- | --- |
+| [WEEMS](https://www.weems.dev/) | HTTP 200; rendered homepage describes scientific workflows, AI assistance, collaboration and compute | 30% frontend, 80% backend |
+| [Greft](https://www.greft.ai/) | HTTP 200; public preview describes persistent agent addresses and messaging | 80% frontend, 80% backend |
+| [Attestly](https://www.atestly.com/) | HTTP 200; atestly.com redirects to www, with current branding “Attestly” and proof-of-presence product information | 80% frontend, 80% backend |
+| Scramble / tryscramble.com | Both apex and www returned HTTP 404; retained as historical work without a broken Visit website link | 80% backend |
+| [CommonLedge](https://www.commonledge.com/) | www returned HTTP 200; rendered Problems homepage describes human/agent collaboration. Apex TLS failed, so use www | 30% overall |
+
+These checks confirm public product presence and descriptions at review time. They do not independently verify the owner's employment, implementation work, percentages, security guarantees, or completeness of each product. Contribution percentages are expressly presented as personal estimates, not ownership shares or audited metrics. No company repository was inspected or modified during this update.
+
+WEEMS technical claims are based on the owner's confirmation and supplied inventory: Python/FastAPI, LangGraph and LangChain Deep Agents, streamed execution and checkpoints, permission-aware tools/MCP, Socket.IO/Yjs, PostgreSQL/SQLAlchemy/Alembic, Redis, GCP/GKE, identity, billing, and notifications. Use unversioned Next.js because the supplied inventories mention both versions 14 and 15 without migration evidence. Do not assert “sole runtime,” zero plaintext secrets, production-readiness of the local-compute adapter, or measured business outcomes without further evidence. Internal incident details, database repair methods, registry paths, and configuration values are omitted from the public showcase.
+
+The portfolio's canonical URL remains https://www.nkenfa.dev/; the new project entries retain company/contract attribution and do not expose source repositories.

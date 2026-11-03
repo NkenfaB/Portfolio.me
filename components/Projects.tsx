@@ -98,12 +98,22 @@ function ProjectCard({
             <span />
             {project.status}
           </p>
+          {project.contribution && (
+            <p className="project-contribution">{project.contribution}</p>
+          )}
           <details className="project-details">
             <summary>
               <span>Project overview</span>
               <HiPlus aria-hidden="true" />
             </summary>
             <p>{project.description}</p>
+            {project.highlights && (
+              <ul className="project-highlights">
+                {project.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            )}
           </details>
           <ul className="technology-list" aria-label="Technologies">
             {project.tech.map((tech) => (
